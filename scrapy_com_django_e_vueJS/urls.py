@@ -20,11 +20,12 @@ from django.urls import path, include
 from rest_framework import routers
 from core.api.viewset import CitacoesViewSet
 
+
 router = routers.DefaultRouter()
 router.register(r'', CitacoesViewSet)
 
 
 urlpatterns = [
-    path('',include(router.urls)),
+    path('api/',include(router.urls)),
     path('admin/', admin.site.urls),
 ]
